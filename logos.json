@@ -33,5 +33,12 @@
     "type": "Logo",
     "image_url": "https://raw.githubusercontent.com/synt4ix/MyWebsite/main/images/open_voice_logo.png",
     "added": "2026-04-22"
+  },
+  {
+    "name": "Arabian Hood Logo",
+    "description": "",
+    "type": "Work",
+    "image_url": "https://raw.githubusercontent.com/synt4ix/MyWebsite/main/images/arabian_hood_logo.png",
+    "added": "2026-04-22"
   }
 ]
