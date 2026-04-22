@@ -49,7 +49,7 @@ nav{
 }
 
 .nav-inner{
-  max-width:980px;
+  max-width:1200px;
   margin:0 auto;
   padding:0 22px;
   display:flex;
@@ -89,7 +89,7 @@ nav{
 .hero{
   padding:160px 22px 100px;
   text-align:center;
-  max-width:980px;
+  max-width:1200px;
   margin:0 auto;
 }
 
@@ -123,16 +123,15 @@ nav{
   background-clip:text;
 }
 
-.hero-sub{
-  font-size:19px;
-  font-weight:300;
-  color:var(--text2);
-  max-width:460px;
-  margin:0 auto;
-  line-height:1.6;
-  letter-spacing:-0.2px;
+.visit-counter{
+  margin-top:20px;
   opacity:0;
-  animation:fadeUp .8s .3s ease forwards;
+  animation:fadeUp .8s .4s ease forwards;
+}
+
+.visit-counter img{
+  height:22px;
+  border-radius:6px;
 }
 
 @keyframes fadeUp{
@@ -143,7 +142,7 @@ nav{
 /* SECTION */
 .section{
   padding:80px 22px;
-  max-width:980px;
+  max-width:1200px;
   margin:0 auto;
 }
 
@@ -169,121 +168,104 @@ nav{
   font-size:17px;
   font-weight:300;
   color:var(--text2);
-  margin-bottom:52px;
+  margin-bottom:28px;
   letter-spacing:-0.2px;
 }
 
-/* BENTO GRID */
+/* GRID */
 .bento{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
+  grid-template-columns:repeat(3, 1fr);
+  gap:6px;
 }
 
-@media(max-width:720px){
-  .bento{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){
+  .bento{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 
-@media(max-width:480px){
-  .bento{grid-template-columns:1fr}
+@media(max-width:560px){
+  .bento{
+    grid-template-columns:1fr;
+  }
 }
 
 .bento-card{
-  background:linear-gradient(180deg,var(--bg3),var(--bg4));
-  border:1px solid var(--border);
-  border-radius:var(--radius);
   position:relative;
   overflow:hidden;
+  background:#111;
+  border-radius:0;
+  min-height:340px;
   cursor:pointer;
-  transition:transform .35s cubic-bezier(.25,.46,.45,.94), border-color .25s ease;
-  min-height:260px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+  border:1px solid rgba(255,255,255,0.04);
+  transition:transform .28s ease, border-color .28s ease;
 }
 
 .bento-card:hover{
-  transform:translateY(-4px);
-  border-color:var(--border2);
+  transform:scale(0.99);
+  border-color:rgba(255,255,255,0.12);
 }
 
 .bento-card img{
   width:100%;
   height:100%;
-  max-width:100%;
-  max-height:220px;
-  object-fit:contain;
   display:block;
-  transition:transform .4s cubic-bezier(.25,.46,.45,.94);
-  filter:drop-shadow(0 10px 20px rgba(0,0,0,0.25));
-}
-
-.bento-card.is-thumb{
-  padding:0;
-  min-height:320px;
-}
-
-.bento-card.is-thumb img{
-  max-height:none;
-  width:100%;
-  height:100%;
   object-fit:cover;
-  filter:none;
-}
-
-.bento-card.is-thumb.featured{
-  grid-column:span 2;
-  min-height:420px;
-}
-
-@media(max-width:720px){
-  .bento-card.is-thumb.featured{
-    grid-column:span 2;
-    min-height:340px;
-  }
-}
-
-@media(max-width:480px){
-  .bento-card.is-thumb.featured{
-    grid-column:span 1;
-    min-height:280px;
-  }
+  transition:transform .45s ease;
 }
 
 .bento-card:hover img{
   transform:scale(1.03);
 }
 
+/* nur Thumbnails groß */
+.bento-card.is-thumb{
+  min-height:500px;
+  grid-column:span 2;
+}
+
+@media(max-width:900px){
+  .bento-card.is-thumb{
+    grid-column:span 2;
+    min-height:400px;
+  }
+}
+
+@media(max-width:560px){
+  .bento-card.is-thumb{
+    grid-column:span 1;
+    min-height:320px;
+  }
+}
+
 .bento-overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(to top,rgba(0,0,0,0.82) 0%,rgba(0,0,0,0.18) 50%,transparent 75%);
-  opacity:0;
-  transition:opacity .3s;
+  background:linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 45%, transparent 70%);
   display:flex;
   align-items:flex-end;
-  padding:20px;
+  padding:22px;
 }
 
-.bento-card:hover .bento-overlay{
-  opacity:1;
+.bento-meta{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
 }
 
 .bento-name{
-  font-size:16px;
+  font-size:18px;
   font-weight:600;
   color:#fff;
   letter-spacing:-0.2px;
-  margin-bottom:3px;
 }
 
 .bento-type{
-  font-size:11px;
-  color:rgba(255,255,255,0.55);
+  font-size:12px;
+  color:rgba(255,255,255,0.7);
   text-transform:uppercase;
-  letter-spacing:0.5px;
+  letter-spacing:0.6px;
 }
 
 /* EMPTY / LOADING */
@@ -332,22 +314,11 @@ nav{
   to{transform:rotate(360deg)}
 }
 
-.visit-counter{
-  margin-top:20px;
-  opacity:0;
-  animation:fadeUp .8s .4s ease forwards;
-}
-
-.visit-counter img{
-  height:22px;
-  border-radius:6px;
-}
-
 /* DIVIDER */
 .divider{
   height:1px;
   background:var(--border);
-  max-width:980px;
+  max-width:1200px;
   margin:0 auto;
 }
 
@@ -355,7 +326,7 @@ nav{
 footer{
   padding:44px 22px;
   border-top:1px solid var(--border);
-  max-width:980px;
+  max-width:1200px;
   margin:0 auto;
   display:flex;
   align-items:center;
@@ -398,14 +369,14 @@ footer{
 }
 
 .lb-inner{
-  max-width:min(88vw,760px);
+  max-width:min(88vw,900px);
   width:100%;
 }
 
 .lb-inner img{
   width:100%;
   border-radius:14px;
-  max-height:65vh;
+  max-height:70vh;
   object-fit:contain;
   display:block;
   margin:0 auto 22px;
@@ -533,7 +504,7 @@ footer{
 </div>
 
 <script>
-// Scroll reveal
+// reveal
 const obs = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -545,9 +516,9 @@ const obs = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el))
 
-// Lightbox
+// lightbox
 function openLb(item) {
-  document.getElementById('lb-img').src = item.image_url
+  document.getElementById('lb-img').src = item.image_url || ''
   document.getElementById('lb-img').alt = item.name || 'Portfolio image'
   document.getElementById('lb-name').textContent = item.name || ''
   document.getElementById('lb-desc').textContent = item.description || ''
@@ -570,7 +541,7 @@ document.addEventListener('keydown', e => {
   }
 })
 
-// Load portfolio
+// portfolio
 async function load() {
   const grid = document.getElementById('portfolio-grid')
   const sub = document.getElementById('portfolio-sub')
@@ -589,40 +560,30 @@ async function load() {
           <div class="state-icon">🖼️</div>
           <div class="state-title">Nothing here yet</div>
           <div class="state-sub">Check back soon.</div>
-        </div>`
+        </div>
+      `
       return
     }
 
     sub.textContent = logos.length + ' project' + (logos.length !== 1 ? 's' : '')
 
-    let featuredThumbUsed = false
-
     logos.forEach((item, i) => {
       const card = document.createElement('div')
 
-      const isThumb =
-        item.thumbnail === true ||
-        item.is_thumbnail === true ||
-        item.layout === 'thumbnail' ||
-        item.type === 'thumbnail' ||
-        item.type === 'Thumbnail'
+      const typeValue = (item.type || '').toString().trim().toLowerCase()
+      const isThumb = typeValue === 'thumbnail'
 
       card.className = 'bento-card' + (isThumb ? ' is-thumb' : '')
 
-      if (isThumb && !featuredThumbUsed) {
-        card.classList.add('featured')
-        featuredThumbUsed = true
-      }
-
       card.innerHTML = `
         <img
-          src="${item.image_url}"
+          src="${item.image_url || ''}"
           alt="${item.name || 'Portfolio image'}"
           loading="${i < 3 ? 'eager' : 'lazy'}"
           onerror="this.style.display='none'; this.parentElement.style.background='#1c1c1e';"
         >
         <div class="bento-overlay">
-          <div>
+          <div class="bento-meta">
             <div class="bento-name">${item.name || 'Untitled'}</div>
             <div class="bento-type">${item.type || 'Work'}</div>
           </div>
@@ -634,14 +595,15 @@ async function load() {
     })
 
     obs.observe(grid)
-  } catch (e) {
+  } catch (err) {
     sub.textContent = ''
     grid.innerHTML = `
       <div class="state-box">
         <div class="state-icon">🖼️</div>
         <div class="state-title">Nothing here yet</div>
         <div class="state-sub">Check back soon.</div>
-      </div>`
+      </div>
+    `
   }
 }
 
