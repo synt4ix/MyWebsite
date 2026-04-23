@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Synthix — Bot & Portfolio</title>
+<title>Synthix's Portfolio</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
@@ -18,9 +18,6 @@
   --text2:#a1a1a6;
   --text3:#6e6e73;
   --accent:#2997ff;
-  --green:#32d74b;
-  --orange:#ff9f0a;
-  --purple:#bf5af2;
   --radius:18px;
 }
 
@@ -109,7 +106,7 @@ nav{
   background-clip:text;
 }
 .hero-sub{
-  max-width:760px;
+  max-width:740px;
   margin:0 auto;
   font-size:19px;
   line-height:1.55;
@@ -119,48 +116,10 @@ nav{
   opacity:0;
   animation:fadeUp .8s .3s ease forwards;
 }
-.hero-actions{
-  margin-top:26px;
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-  opacity:0;
-  animation:fadeUp .8s .4s ease forwards;
-}
-.hero-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  text-decoration:none;
-  border-radius:999px;
-  padding:11px 18px;
-  font-size:14px;
-  font-weight:500;
-  transition:all .25s ease;
-}
-.hero-btn.primary{
-  background:var(--accent);
-  color:#fff;
-}
-.hero-btn.primary:hover{
-  background:#4aa8ff;
-  transform:translateY(-1px);
-}
-.hero-btn.secondary{
-  background:rgba(255,255,255,0.05);
-  color:var(--text);
-  border:1px solid rgba(255,255,255,0.08);
-}
-.hero-btn.secondary:hover{
-  background:rgba(255,255,255,0.08);
-  transform:translateY(-1px);
-}
 .visit-counter{
   margin-top:20px;
   opacity:0;
-  animation:fadeUp .8s .5s ease forwards;
+  animation:fadeUp .8s .4s ease forwards;
 }
 .visit-counter img{
   height:22px;
@@ -199,142 +158,6 @@ nav{
   color:var(--text2);
   margin-bottom:28px;
   letter-spacing:-0.2px;
-}
-
-/* BOT PANEL */
-.bot-panel{
-  position:relative;
-  overflow:hidden;
-  background:linear-gradient(180deg, rgba(28,28,30,0.92) 0%, rgba(16,16,18,0.96) 100%);
-  border:1px solid rgba(255,255,255,0.08);
-  border-radius:30px;
-  padding:28px;
-  backdrop-filter:saturate(160%) blur(22px);
-  -webkit-backdrop-filter:saturate(160%) blur(22px);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.05),
-    0 10px 30px rgba(0,0,0,0.28);
-}
-.bot-panel::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:radial-gradient(circle at top left, rgba(255,255,255,0.08), transparent 42%);
-  pointer-events:none;
-}
-.bot-top{
-  position:relative;
-  z-index:1;
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:20px;
-  margin-bottom:24px;
-  flex-wrap:wrap;
-}
-.bot-title-wrap{max-width:760px;}
-.bot-kicker{
-  font-size:11px;
-  font-weight:600;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  color:var(--text3);
-  margin-bottom:6px;
-}
-.bot-title{
-  font-size:clamp(30px,5vw,54px);
-  font-weight:700;
-  letter-spacing:-1.8px;
-  line-height:1.02;
-  margin-bottom:10px;
-}
-.bot-desc{
-  font-size:17px;
-  line-height:1.6;
-  color:var(--text2);
-  font-weight:300;
-  max-width:60ch;
-}
-.bot-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  border-radius:999px;
-  padding:10px 14px;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.08);
-  color:var(--text2);
-  font-size:13px;
-  font-weight:500;
-}
-.bot-badge-dot{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:var(--green);
-  box-shadow:0 0 14px rgba(50,215,75,0.55);
-}
-
-.feature-grid{
-  position:relative;
-  z-index:1;
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:16px;
-}
-@media(max-width:960px){.feature-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:640px){.feature-grid{grid-template-columns:1fr;}}
-
-.feature-card{
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.06);
-  border-radius:24px;
-  padding:22px;
-  min-height:220px;
-  transition:transform .25s ease, background .25s ease, border-color .25s ease;
-}
-.feature-card:hover{
-  transform:translateY(-3px);
-  background:rgba(255,255,255,0.045);
-  border-color:rgba(255,255,255,0.1);
-}
-.feature-icon{
-  width:42px;
-  height:42px;
-  border-radius:14px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:14px;
-  font-size:18px;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.08);
-}
-.feature-title{
-  font-size:20px;
-  font-weight:600;
-  letter-spacing:-0.5px;
-  margin-bottom:8px;
-}
-.feature-desc{
-  font-size:14px;
-  line-height:1.65;
-  color:var(--text2);
-  margin-bottom:14px;
-}
-.feature-list{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-.feature-pill{
-  font-size:11px;
-  font-weight:500;
-  color:var(--text2);
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.06);
-  border-radius:999px;
-  padding:6px 10px;
 }
 
 /* BENTO */
@@ -495,40 +318,18 @@ nav{
   display:block;
   text-decoration:none;
   color:inherit;
-  background:linear-gradient(180deg, rgba(28,28,30,0.92) 0%, rgba(16,16,18,0.96) 100%);
+  min-height:280px;
+  border-radius:28px;
+  background:linear-gradient(180deg, rgba(28,28,30,0.92) 0%, rgba(16,16,18,0.98) 100%);
   border:1px solid rgba(255,255,255,0.08);
-  border-radius:26px;
-  padding:22px;
-  min-height:220px;
-  backdrop-filter:saturate(160%) blur(22px);
-  -webkit-backdrop-filter:saturate(160%) blur(22px);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.05),
     0 10px 30px rgba(0,0,0,0.28);
   transition:
     transform .35s cubic-bezier(.22,1,.36,1),
     border-color .35s ease,
-    background .35s ease,
     box-shadow .35s ease;
 }
-
-.discord-card::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:radial-gradient(circle at top left, rgba(255,255,255,0.07), transparent 42%);
-  pointer-events:none;
-}
-
-.discord-card::after{
-  content:'';
-  position:absolute;
-  inset:auto 0 0 0;
-  height:1px;
-  background:linear-gradient(90deg, transparent, rgba(255,255,255,0.09), transparent);
-  pointer-events:none;
-}
-
 .discord-card:hover{
   transform:translateY(-4px);
   border-color:rgba(255,255,255,0.14);
@@ -537,27 +338,91 @@ nav{
     0 18px 44px rgba(0,0,0,0.34);
 }
 
+.dc-banner{
+  position:absolute;
+  inset:0 0 auto 0;
+  height:44%;
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,0.05), rgba(0,0,0,0.04)),
+    linear-gradient(135deg, #1c1c1e 0%, #0f0f11 100%);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.dc-banner::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.55) 100%);
+}
+.dc-content{
+  position:relative;
+  z-index:1;
+  padding:20px;
+  padding-top:88px;
+}
+
+.dc-arrow{
+  position:absolute;
+  top:18px;
+  right:18px;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,0.22);
+  border:1px solid rgba(255,255,255,0.10);
+  z-index:2;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    transform .25s ease;
+}
+.dc-arrow svg{
+  width:10px;
+  height:10px;
+  stroke:rgba(255,255,255,0.8);
+  fill:none;
+  stroke-width:2;
+}
+.discord-card:hover .dc-arrow{
+  transform:translateY(-1px);
+  background:rgba(0,0,0,0.32);
+  border-color:rgba(255,255,255,0.16);
+}
+
 .dc-top{
   display:flex;
   align-items:flex-start;
   gap:14px;
   margin-bottom:14px;
-  position:relative;
-  z-index:1;
 }
 
 .dc-logo{
-  width:48px;
-  height:48px;
-  border-radius:14px;
+  width:56px;
+  height:56px;
+  border-radius:16px;
   display:flex;
   align-items:center;
   justify-content:center;
   flex-shrink:0;
+  overflow:hidden;
   background:linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
-  border:1px solid rgba(255,255,255,0.08);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,0.05);
-  font-size:18px;
+  border:1px solid rgba(255,255,255,0.1);
+  box-shadow:
+    0 12px 28px rgba(0,0,0,0.28),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  font-size:22px;
+}
+.dc-logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
 .dc-info{
@@ -568,7 +433,7 @@ nav{
 .dc-platform{
   font-size:11px;
   font-weight:500;
-  color:var(--text3);
+  color:rgba(255,255,255,0.72);
   letter-spacing:.6px;
   text-transform:uppercase;
   margin-bottom:4px;
@@ -589,14 +454,14 @@ nav{
   letter-spacing:.3px;
   padding:6px 10px;
   border-radius:999px;
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.08);
-  color:var(--text2);
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.1);
+  color:rgba(255,255,255,0.88);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
 }
 
 .dc-meta{
-  position:relative;
-  z-index:1;
   display:flex;
   flex-wrap:wrap;
   gap:8px;
@@ -613,8 +478,6 @@ nav{
 }
 
 .dc-desc{
-  position:relative;
-  z-index:1;
   font-size:14px;
   line-height:1.65;
   font-weight:400;
@@ -624,17 +487,10 @@ nav{
   max-width:52ch;
 }
 
-.dc-desc strong{
-  color:var(--text);
-  font-weight:500;
-}
-
 .dc-tags{
   display:flex;
   flex-wrap:wrap;
   gap:8px;
-  position:relative;
-  z-index:1;
   margin-bottom:18px;
 }
 
@@ -650,8 +506,6 @@ nav{
 }
 
 .dc-cta{
-  position:relative;
-  z-index:1;
   display:inline-flex;
   align-items:center;
   gap:8px;
@@ -668,49 +522,10 @@ nav{
     border-color .25s ease,
     transform .25s ease;
 }
-
 .dc-cta:hover{
   background:rgba(255,255,255,0.1);
   border-color:rgba(255,255,255,0.14);
   transform:translateY(-1px);
-}
-
-.dc-arrow{
-  position:absolute;
-  top:18px;
-  right:18px;
-  width:30px;
-  height:30px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.06);
-  z-index:1;
-  transition:
-    background .25s ease,
-    border-color .25s ease,
-    transform .25s ease;
-}
-
-.dc-arrow svg{
-  width:10px;
-  height:10px;
-  stroke:rgba(255,255,255,0.56);
-  fill:none;
-  stroke-width:2;
-  transition:stroke .25s ease;
-}
-
-.discord-card:hover .dc-arrow{
-  background:rgba(255,255,255,0.08);
-  border-color:rgba(255,255,255,0.11);
-  transform:translateY(-1px);
-}
-
-.discord-card:hover .dc-arrow svg{
-  stroke:rgba(255,255,255,0.86);
 }
 
 @media(max-width:640px){
@@ -718,17 +533,17 @@ nav{
     grid-template-columns:1fr;
     gap:14px;
   }
-
   .discord-card{
     border-radius:22px;
-    padding:20px;
-    min-height:auto;
+    min-height:260px;
   }
-
+  .dc-content{
+    padding:18px;
+    padding-top:82px;
+  }
   .dc-name{
     font-size:19px;
   }
-
   .dc-role-badge{
     display:none;
   }
@@ -855,7 +670,6 @@ footer{
   <div class="nav-inner">
     <a class="nav-logo" href="#">Synthix</a>
     <div class="nav-links">
-      <a class="nav-link" href="#bot">Bot</a>
       <a class="nav-link" href="#portfolio">Portfolio</a>
       <a class="nav-link" href="#communities">Communities</a>
     </div>
@@ -863,136 +677,15 @@ footer{
 </nav>
 
 <div class="hero">
-  <div class="hero-eyebrow">Discord Utility Bot</div>
-  <h1>Synthix<br><em>Bot.</em></h1>
+  <div class="hero-eyebrow">Creative Work</div>
+  <h1>Synthix's<br><em>Portfolio.</em></h1>
   <p class="hero-sub">
-    A multi-purpose Discord bot built for Roblox tools, Discord lookup, security checks,
-    portfolio management, and community integration.
+    A collection of visual work, projects, and the communities I’m building with.
   </p>
-  <div class="hero-actions">
-    <a class="hero-btn primary" href="#bot">Explore Features</a>
-    <a class="hero-btn secondary" href="#communities">View Communities</a>
-  </div>
   <div class="visit-counter">
     <img src="https://hits.sh/iced2006.github.io/MyWebsite.svg?style=flat-square&label=visits&color=2997ff&labelColor=1c1c1e" alt="visits">
   </div>
 </div>
-
-<div class="divider"></div>
-
-<!-- BOT -->
-<section class="section" id="bot">
-  <div class="reveal">
-    <div class="section-label">Bot</div>
-    <div class="section-title">Built around utility.</div>
-    <p class="section-sub">Discord, Roblox, security tools, and website management in one bot.</p>
-  </div>
-
-  <div class="bot-panel reveal">
-    <div class="bot-top">
-      <div class="bot-title-wrap">
-        <div class="bot-kicker">Synthix Bot</div>
-        <div class="bot-title">Powerful tools, built into Discord.</div>
-        <p class="bot-desc">
-          Manage your portfolio, sync communities to your website, inspect Roblox profiles and items,
-          run security lookups, and access utility commands from a single command system.
-        </p>
-      </div>
-      <div class="bot-badge">
-        <span class="bot-badge-dot"></span>
-        Online-ready command system
-      </div>
-    </div>
-
-    <div class="feature-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🤖</div>
-        <div class="feature-title">Discord tools</div>
-        <p class="feature-desc">
-          Inspect user profiles, fetch server information, and manage whitelists with clean slash commands.
-        </p>
-        <div class="feature-list">
-          <span class="feature-pill">/userinfo</span>
-          <span class="feature-pill">/serverinfo</span>
-          <span class="feature-pill">/whitelist</span>
-          <span class="feature-pill">/website</span>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🎮</div>
-        <div class="feature-title">Roblox utilities</div>
-        <p class="feature-desc">
-          View Roblox users, games, items, and groups with detailed embeds and market-related information.
-        </p>
-        <div class="feature-list">
-          <span class="feature-pill">/roblox</span>
-          <span class="feature-pill">/roblox_id</span>
-          <span class="feature-pill">/game</span>
-          <span class="feature-pill">/item</span>
-          <span class="feature-pill">/group</span>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🛡️</div>
-        <div class="feature-title">Security checks</div>
-        <p class="feature-desc">
-          Run quick checks for domains, IPs, websites, leaks, and reputation data across multiple services.
-        </p>
-        <div class="feature-list">
-          <span class="feature-pill">/ipinfo</span>
-          <span class="feature-pill">/domaininfo</span>
-          <span class="feature-pill">/webcheck</span>
-          <span class="feature-pill">/urlscan</span>
-          <span class="feature-pill">/hackcheck</span>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">🌐</div>
-        <div class="feature-title">Website sync</div>
-        <p class="feature-desc">
-          Add portfolio entries and publish community servers directly to GitHub-backed website files.
-        </p>
-        <div class="feature-list">
-          <span class="feature-pill">/portfolio</span>
-          <span class="feature-pill">/discord</span>
-          <span class="feature-pill">logos.json</span>
-          <span class="feature-pill">discord_servers.json</span>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <div class="feature-title">Slash-command workflow</div>
-        <p class="feature-desc">
-          Built with app commands, role checks, GitHub syncing, external API support, and structured embeds.
-        </p>
-        <div class="feature-list">
-          <span class="feature-pill">discord.py</span>
-          <span class="feature-pill">aiohttp</span>
-          <span class="feature-pill">GitHub API</span>
-          <span class="feature-pill">dotenv</span>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">📦</div>
-        <div class="feature-title">Community system</div>
-        <p class="feature-desc">
-          Communities added through the bot are automatically reflected on the site using your server JSON file.
-        </p>
-        <div class="feature-list">
-          <span class="feature-pill">Owner</span>
-          <span class="feature-pill">Contributor</span>
-          <span class="feature-pill">Developer</span>
-          <span class="feature-pill">Auto-rendered</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <div class="divider"></div>
 
@@ -1019,7 +712,7 @@ footer{
   <div class="reveal">
     <div class="section-label">Community</div>
     <div class="section-title">Connected communities.</div>
-    <p class="section-sub">Servers published through the bot and synced to the website.</p>
+    <p class="section-sub">Servers I own, contribute to, and build for.</p>
   </div>
 
   <div class="comm-group reveal" id="group-owner">
@@ -1065,7 +758,18 @@ footer{
 </div>
 
 <script>
-// Reveal
+const ROLE_LABELS = {
+  owner: "Owner",
+  contributor: "Contributor",
+  developer: "Developer"
+};
+
+const ROLE_ICONS = {
+  owner: "👑",
+  contributor: "🛠️",
+  developer: "👨‍💻"
+};
+
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -1077,7 +781,6 @@ const obs = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-// Lightbox
 function openLb(item) {
   document.getElementById('lb-img').src = item.image_url || '';
   document.getElementById('lb-img').alt = item.name || '';
@@ -1102,62 +805,68 @@ document.addEventListener('keydown', e => {
   }
 });
 
-// Role labels
-const ROLE_LABELS = {
-  owner: "Owner",
-  contributor: "Contributor",
-  developer: "Developer"
-};
+function escapeHtml(str = '') {
+  return str
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;');
+}
 
-const ROLE_ICONS = {
-  owner: "👑",
-  contributor: "🛠️",
-  developer: "👨‍💻"
-};
-
-// Build community card using your bot JSON structure
 function buildCard(server) {
   const role = server.role || "contributor";
   const roleLabel = ROLE_LABELS[role] || "Member";
   const roleIcon = ROLE_ICONS[role] || "✦";
-  const tags = (server.tags || []).map(t => `<span class="dc-tag">${t}</span>`).join('');
+  const tags = (server.tags || []).map(t => `<span class="dc-tag">${escapeHtml(String(t))}</span>`).join('');
   const memberCount = typeof server.member_count === 'number'
     ? server.member_count.toLocaleString()
     : '—';
 
+  const bannerStyle = server.banner_url
+    ? `style="background-image:linear-gradient(to bottom, rgba(255,255,255,0.05), rgba(0,0,0,0.04)), url('${server.banner_url}');"`
+    : '';
+
+  const logo = server.icon_url
+    ? `<img src="${server.icon_url}" alt="${escapeHtml(server.guild_name || 'Server icon')}" loading="lazy">`
+    : roleIcon;
+
   return `
     <a class="discord-card" href="${server.invite_url || '#'}" target="_blank" rel="noopener noreferrer">
+      <div class="dc-banner" ${bannerStyle}></div>
+
       <div class="dc-arrow">
         <svg viewBox="0 0 12 12">
           <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
 
-      <div class="dc-top">
-        <div class="dc-logo">${roleIcon}</div>
-        <div class="dc-info">
-          <div class="dc-platform">Discord Community</div>
-          <div class="dc-name">${server.guild_name || 'Unknown Server'}</div>
+      <div class="dc-content">
+        <div class="dc-top">
+          <div class="dc-logo">${logo}</div>
+          <div class="dc-info">
+            <div class="dc-platform">Discord Community</div>
+            <div class="dc-name">${escapeHtml(server.guild_name || 'Unknown Server')}</div>
+          </div>
+          <span class="dc-role-badge">${roleLabel}</span>
         </div>
-        <span class="dc-role-badge">${roleLabel}</span>
-      </div>
 
-      <div class="dc-meta">
-        <span class="dc-meta-pill">${memberCount} members</span>
-        ${server.added ? `<span class="dc-meta-pill">Added ${server.added}</span>` : ''}
-      </div>
+        <div class="dc-meta">
+          <span class="dc-meta-pill">${memberCount} members</span>
+          ${server.added ? `<span class="dc-meta-pill">Added ${escapeHtml(server.added)}</span>` : ''}
+        </div>
 
-      <p class="dc-desc">${server.description || 'A connected Discord community published through the Synthix bot.'}</p>
+        <p class="dc-desc">${escapeHtml(server.description || 'A connected Discord community published through the Synthix site.')}</p>
 
-      <div class="dc-tags">${tags}</div>
+        <div class="dc-tags">${tags}</div>
 
-      <div class="dc-cta">
-        <span>Open Community</span>
+        <div class="dc-cta">
+          <span>Open Community</span>
+        </div>
       </div>
     </a>`;
 }
 
-// Render communities from discord_servers.json
 async function loadCommunities() {
   const ownerGrid = document.getElementById('grid-owner');
   const contGrid = document.getElementById('grid-contributor');
@@ -1199,7 +908,6 @@ async function loadCommunities() {
   }
 }
 
-// Portfolio
 async function loadPortfolio() {
   const grid = document.getElementById('portfolio-grid');
   const sub = document.getElementById('portfolio-sub');
